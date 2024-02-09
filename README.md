@@ -1,14 +1,14 @@
 # Number of cord intersections inside Circle
 Programming Language: Python
 
-This program calculates the number of intersections among a set of cords inside a circle. It takes a list as an input, where list has two tuple elemnts. The first tuple has radian angle of the cord’s endpoints on the circle, and the second tuple has cord identifier.
+This program calculates the number of intersections among a set of cords inside a circle. It takes a list as an input, where list has two tuple elements. The first tuple has radian angle of the cord’s endpoints on the circle, and the second tuple has cord identifier.
 
 Example input : [(0.78, 1.47, 1.77, 3.92), ("s_1", "s_2", "e_1", "e_2")]
 
 The code works as follows:
 *  It defines a function get_intersections that takes the input list as a parameter and returns the output integer.
 
-*  It creates an empty dictionary chords that will store the chord identifiers as keys and the sorted radian angles as values. For example, for the previous input, chords will be {1: [0.78, 1.77], 2: [1.47, 3.92]}.
+*  It creates an empty dictionary chords that will store the chord identifiers as keys and the sorted radian angles as values. For example, for the example input above, chords will be {1: [0.78, 1.77], 2: [1.47, 3.92]}.
 
 *  It loops through the input list using zip to pair the radian angles and the identifiers. For each pair, it extracts the chord number using re.findall and checks if it is already in chords. If yes, it appends the radian angle to the existing list and sorts it. If no, it creates a new list with the radian angle and assigns it to the chord number.
 
